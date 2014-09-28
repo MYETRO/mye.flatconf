@@ -7,10 +7,10 @@
 		<include>CommonBackground</include>
 		<control type="image">
 			<posx>0</posx>
-			<posy>90r</posy>
+			<posy>100r</posy>
 			<width>1280</width>
-			<height>90</height>
-			<texture>solidfills/s-greydark1.png</texture>
+			<height>100</height>
+			<texture>solidfills/s-greydark.png</texture>
 			<animation effect="fade" time="250" condition="Window.Previous(Home)">WindowOpen</animation>
 			<animation effect="fade" time="250" condition="Window.Next(Home)">WindowClose</animation>
 			<visible>!Skin.HasSetting(NoFloor)</visible>
@@ -207,64 +207,7 @@
 		</control>
 		
 		
-		<!-- Music Info -->
-		<control type="group">
-			<posx>0</posx>
-			<posy>300</posy>
-			<visible>Player.HasAudio + !Skin.HasSetting(homepageMusicinfo)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<control type="image">
-				<description>Cover image</description>
-				<posx>20</posx>
-				<posy>45</posy>
-				<width>130</width>
-				<height>295</height>
-				<aspectratio aligny="bottom">keep</aspectratio>
-				<texture fallback="DefaultAlbumCover.png">$INFO[Player.Art(thumb)]</texture>
-				<bordertexture border="8">ThumbBorder.png</bordertexture>
-				<bordersize>5</bordersize>
-			</control>
-			<control type="label">
-				<description>Album Label</description>
-				<posx>170</posx>
-				<posy>265</posy>
-				<height>25</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Artist,, - ]$INFO[MusicPlayer.Album]$INFO[musicplayer.discnumber, - $LOCALIZE[427]:]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>Title label</description>
-				<posx>170</posx>
-				<posy>285</posy>
-				<height>30</height>
-				<width>1000</width>
-				<label>$INFO[MusicPlayer.Title]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font13_title</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-			<control type="label">
-				<description>Time Label</description>
-				<posx>170</posx>
-				<posy>310</posy>
-				<height>30</height>
-				<width>300</width>
-				<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-				<align>left</align>
-				<aligny>center</aligny>
-				<font>font12</font>
-				<textcolor>white</textcolor>
-				<shadowcolor>black</shadowcolor>
-			</control>
-		</control>
+		
 		<!-- LiveTV Info -->
 		<control type="group">
 			<posx>490r</posx>
@@ -409,213 +352,10 @@
 				</control>
 			</control>
 		</control>
-		<!-- Video Info -->
-		<control type="group">
-			<posx>0</posx>
-			<posy>290</posy>
-			<visible>Player.HasVideo + !Skin.HasSetting(homepageVideoinfo)</visible>
-			<include>VisibleFadeEffect</include>
-			<include>Window_OpenClose_Animation</include>
-			<control type="group">
-				<visible>!VideoPlayer.Content(Movies) + !VideoPlayer.Content(Episodes) + !VideoPlayer.Content(LiveTV)</visible>
-				<control type="image">
-					<description>Cover image</description>
-					<posx>20</posx>
-					<posy>45</posy>
-					<width>150</width>
-					<height>300</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="label">
-					<description>Title label</description>
-					<posx>190</posx>
-					<posy>285</posy>
-					<height>30</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Time Label</description>
-					<posx>190</posx>
-					<posy>310</posy>
-					<height>30</height>
-					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<control type="group">
-				<visible>VideoPlayer.Content(LiveTV)</visible>
-				<control type="image">
-					<description>Cover image</description>
-					<posx>20</posx>
-					<posy>45</posy>
-					<width>120</width>
-					<height>300</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="label">
-					<description>Channel label</description>
-					<posx>160</posx>
-					<posy>265</posy>
-					<height>25</height>
-					<width>660</width>
-					<label>$INFO[VideoPlayer.ChannelName]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Title label</description>
-					<posx>160</posx>
-					<posy>285</posy>
-					<height>30</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Time Label</description>
-					<posx>160</posx>
-					<posy>310</posy>
-					<height>30</height>
-					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<control type="group">
-				<visible>VideoPlayer.Content(Movies)</visible>
-				<control type="image">
-					<description>Cover image</description>
-					<posx>20</posx>
-					<posy>45</posy>
-					<width>120</width>
-					<height>300</height>
-					<aspectratio aligny="bottom">keep</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="label">
-					<description>Studio label</description>
-					<posx>160</posx>
-					<posy>265</posy>
-					<height>25</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.Studio]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Title label</description>
-					<posx>160</posx>
-					<posy>285</posy>
-					<height>30</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.Title]$INFO[VideoPlayer.Year,[COLOR=grey] (,)[/COLOR]]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Time Label</description>
-					<posx>160</posx>
-					<posy>310</posy>
-					<height>30</height>
-					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-			<control type="group">
-				<visible>VideoPlayer.Content(Episodes)</visible>
-				<control type="image">
-					<description>Cover image</description>
-					<posx>20</posx>
-					<posy>225</posy>
-					<width>180</width>
-					<height>120</height>
-					<aspectratio>scale</aspectratio>
-					<texture fallback="DefaultVideoCover.png">$INFO[Player.Art(thumb)]</texture>
-					<bordertexture border="8">ThumbBorder.png</bordertexture>
-					<bordersize>5</bordersize>
-				</control>
-				<control type="label">
-					<description>TV Show Season Ep Label</description>
-					<posx>210</posx>
-					<posy>265</posy>
-					<height>25</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.TVShowTitle] ($LOCALIZE[20373] $INFO[VideoPlayer.Season] - $LOCALIZE[20359] $INFO[VideoPlayer.episode])</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Title label</description>
-					<posx>210</posx>
-					<posy>285</posy>
-					<height>30</height>
-					<width>1000</width>
-					<label>$INFO[VideoPlayer.Title]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font13_title</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-				<control type="label">
-					<description>Time Label</description>
-					<posx>210</posx>
-					<posy>310</posy>
-					<height>30</height>
-					<width>300</width>
-					<label>$INFO[Player.Time]$INFO[Player.Duration,[COLOR=blue] / [/COLOR]]</label>
-					<align>left</align>
-					<aligny>center</aligny>
-					<font>font12</font>
-					<textcolor>white</textcolor>
-					<shadowcolor>black</shadowcolor>
-				</control>
-			</control>
-		</control>
+
+<!-- Now Playing xml
+	 in Includes.xml  -->
+		<include>CommonAppBar</include>
 		
 		<include condition="!Skin.HasSetting(HomepageHideRecentlyAddedVideo) | !Skin.HasSetting(HomepageHideRecentlyAddedAlbums)">HomeRecentlyAddedInfo</include>
 		<include>HomeWeatherWidget</include>
@@ -1260,15 +1000,15 @@
 
 		<!-- HOME FAV AND POWER BUTTONS    ********* -->
 		<control type="group" id="10">
-			<posx>20</posx>
-			<posy>55r</posy>
+			<posx>120r</posx>
+			<posy>65r</posy>
 			<include>Window_OpenClose_Animation</include>
 			<control type="button" id="20">
 				<description>Power push button</description>
 				<posx>55</posx>
 				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
+				<width>35</width>
+				<height>35</height>
 				<label>31003</label>
 				<font>-</font>
 				<aligny>-</aligny>
@@ -1283,7 +1023,7 @@
 			</control>
 			<control type="image">
 				<description>Power Icon</description>
-				<posx>60</posx>
+				<posx>50</posx>
 				<posy>5</posy>
 				<width>35</width>
 				<height>35</height>
@@ -1295,8 +1035,8 @@
 				<description>Favourites push button</description>
 				<posx>0</posx>
 				<posy>0</posy>
-				<width>45</width>
-				<height>45</height>
+				<width>35</width>
+				<height>35</height>
 				<label>1036</label>
 				<font>-</font>
 				<aligny>-</aligny>

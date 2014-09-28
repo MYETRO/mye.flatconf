@@ -1,6 +1,6 @@
 <window>
 	<defaultcontrol always="true">100</defaultcontrol>
-	<include>dialogeffect</include>
+	<include>toasteffect</include>
 	<coordinates>
 		<system>1</system>
 		<posx>0</posx>
@@ -23,11 +23,11 @@
 			<onright>1000</onright>
 			<onup>100</onup>
 			<ondown>100</ondown>
-			<animation effect="fade" time="200">VisibleChange</animation>
+			<animation effect="fade" time="100">VisibleChange</animation>
 			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
 		</control>
 		<control type="slider" id="87">
-			<description>Seek Slider</description>
+			<description>Seek Slider - only the bit to click and drag position of video. not the progress bar per se</description>
 			<posx>430</posx>
 			<posy>82r</posy>
 			<width>720</width>

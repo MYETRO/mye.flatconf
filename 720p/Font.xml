@@ -39,6 +39,39 @@
 
 
 	<!-- Title Fonts -->
+		<font>
+			<name>25_title_WP_R</name>
+			<filename>SegoeWP.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>25_title_WP_SB</name>
+			<filename>SegoeWP-Semibold.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>20_title_WP_SB</name>
+			<filename>SegoeWP-Semibold.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>40_title_WP_SL</name>
+			<filename>SegoeWP-Semilight.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>40_title_WP_R</name>
+			<filename>SegoeWP.ttf</filename>
+			<size>40</size>
+		</font>
+		<font>
+			<name>40_title_RO_L</name>
+			<filename>Roboto-Light.ttf</filename>
+			<size>40</size>
+		</font>
+
+
 	 	<font>
 			<name>font10_title</name>
 			<filename>Roboto-Bold.ttf</filename>

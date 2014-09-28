@@ -6,7 +6,14 @@
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True&amp;loop=False)</onload>
 	<controls>
 		<include>CommonBackground</include>
-		<include>ContentPanelBackgrounds</include>
+		<!-- <include>ContentPanelBackgrounds</include> -->
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>620</height>
+			<texture>tints/black-80.png</texture>
+		</control>
 		<control type="group">
 			<include>Window_OpenClose_Animation</include>		
 			<include>CommonRootView</include> <!-- view id = 50 -->
@@ -14,7 +21,7 @@
 			<include>ThumbnailView</include> <!-- view id = 500 -->
 			<include>PosterWrapView</include> <!-- view id = 501 -->
 			<include>PosterWrapView2_Fanart</include> <!-- view id = 508 -->
-			<include>MediaListView3</include> <!-- view id = 503 -->
+			<include>MediaListView3</include> <!-- view id = 503  Media Info 3-->
 			<include>MediaListView2</include> <!-- view id = 504 -->
 			<include>MediaListView4</include> <!-- view id = 515 -->
 			<include>WideIconView</include> <!-- view id = 505 -->
@@ -23,22 +30,15 @@
 			<include>AddonInfoThumbView1</include> <!-- view id = 551 -->
 			<include>LiveTVView1</include> <!-- view id = 560 -->
 		</control>
+
+		<include>CommonAppBar</include>
 		<include>CommonPageCount</include>
-		<include>CommonNowPlaying</include>
 		<include>MainWindowMouseButtons</include>
 		<include>BehindDialogFadeOut</include>
 		<include>ScrollOffsetLabel</include>
-		<control type="image">
-			<description>Section header image</description>
-			<posx>20</posx>
-			<posy>3</posy>
-			<width>35</width>
-			<height>35</height>
-			<aspectratio>keep</aspectratio>
-			<texture>icon_video.png</texture>
-		</control>
+
 		<control type="grouplist">
-			<posx>65</posx>
+			<posx>35</posx>
 			<posy>5</posy>
 			<width>1000</width>
 			<height>30</height>
@@ -55,6 +55,7 @@
 				<visible>!IsEmpty(Container.FolderName)</visible>
 			</control>
 		</control>
+
 		<control type="group">
 			<posx>-250</posx>
 			<include>SideBladeLeft</include>

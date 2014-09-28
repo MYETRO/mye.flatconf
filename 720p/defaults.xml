@@ -25,8 +25,8 @@
 		<posy>200</posy>
 		<width>300</width>
 		<height>42</height>
-		<texturefocus border="5">button-focus.png</texturefocus>
-		<texturenofocus border="5">button-nofocus.png</texturenofocus>
+		<texturefocus>button-focus.png</texturefocus>
+		<texturenofocus>button-nofocus.png</texturenofocus>
 		<font>font13</font>
 		<textcolor>white</textcolor>
 		<disabledcolor>grey3</disabledcolor>
@@ -59,11 +59,13 @@
 		<font>font13</font>
 	</default>
 	<default type="progress">
+		<description>OSD Slider - progress bar for the now playing</description>
 		<posx>100</posx>
 		<posy>325</posy>
-		<texturebg border="6,0,6,0">OSDProgressBack.png</texturebg>
+		<!-- <texturebg border="6,0,6,0">OSDProgressBack.png</texturebg> -->
+		<texturebg>solidfills/s-grey4.png</texturebg>
 		<lefttexture>-</lefttexture>
-		<midtexture border="6,0,6,0">OSDProgressMid.png</midtexture>
+		<midtexture>solidfills/s-orange1.png</midtexture>
 		<righttexture>-</righttexture>
 		<overlaytexture>-</overlaytexture>
 	</default>
